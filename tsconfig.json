@@ -1,11 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "preserve"
-  },
-  "include": [
-    "src",
-    "astro.config.mjs",
-    "**/*.mjs"
-  ]
+    "strictNullChecks": true
+  }
 }

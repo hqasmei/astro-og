@@ -1,16 +1,10 @@
-import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/serverless";
-import react from "@astrojs/react";
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-og.vercel.app/",
-  output: "server",
-  adapter: vercel(),
-  integrations: [ react() ],
-   vite: {
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
-  },
+	site: 'https://example.com',
+	integrations: [mdx(), sitemap()],
 });
