@@ -9,4 +9,9 @@ export default defineConfig({
   output: "server",
   adapter: vercel(),
   integrations: [mdx(), sitemap()],
+  vite: {
+    optimizeDeps: {
+      exclude: ["@resvg/resvg-js"],
+    },
+  },
 });
